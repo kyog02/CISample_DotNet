@@ -6,7 +6,7 @@ namespace Test.CISample_DotNet.Model
     public class CalcModelTests
     {
         [TestMethod]
-        public void Add_³íŒn()
+        public void AddTests()
         {
             // Arrange
             int input1 = 1;
