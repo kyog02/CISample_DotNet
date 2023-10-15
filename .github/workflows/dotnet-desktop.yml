@@ -80,7 +80,7 @@ jobs:
 
     # Execute all unit tests in the solution
     - name: Execute unit tests
-      run: dotnet test $env:Test_Project_Path --collect:"XPlat Code Coverage"
+      run: chcp65001 | dotnet test $env:Test_Project_Path --collect:"XPlat Code Coverage"
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
