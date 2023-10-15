@@ -85,7 +85,9 @@ jobs:
      # Copy the coverage.cobertura.xml file to the root directory
     - name: Find coverage output path
       run: |
-        cp $(find . -name "coverage.cobertura.xml") .
+        Get-ChildItem -Recurse -Filter "coverage.cobertura.xml" | ForEach-Object {
+            Copy-Item -Path $_.FullName -Destination ".\"
+        }
 
     # Coverage Œv‘ª:
     - name: Code Coverage Report
